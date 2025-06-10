@@ -66,7 +66,7 @@ Experience the solar system like never before! Navigate through space, control p
 ## 📱 Screenshots
 
 <!-- Add your screenshots here -->
-![Solar System Overview](path-to-your-screenshot-1.png)
+![Solar System Overview](demo.png)
 *Overview of the complete solar system with orbital paths*
 
 
@@ -75,7 +75,7 @@ Experience the solar system like never before! Navigate through space, control p
 ### Option 1: Direct Use
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/3d-solar-system.git
+   git clone https://github.com/lokeshvijay7/3d-solar-system.git
    cd 3d-solar-system
    ```
 
@@ -224,10 +224,8 @@ Students and users will understand:
 ## 👨‍💻 Author
 
 **Your Name**
-- 🐙 GitHub: [@yourusername](https://github.com/yourusername)
-- 💼 LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
-- 📧 Email: your.email@example.com
-- 🌐 Portfolio: [yourportfolio.com](https://yourportfolio.com)
+- 🐙 GitHub: [@lokesh](https://github.com/lokeshvijay7)
+- 📧 Email: loki7cr@gmail.com
 
 ### Project Context
 This project was developed as part of an internship assignment, demonstrating:
@@ -243,5 +241,5 @@ This project was developed as part of an internship assignment, demonstrating:
 
 ### 🚀 Ready to Explore the Solar System?
 
-**[Launch Demo](https://regal-cactus-5a61fb.netlify.app)** | **[View Code](https://github.com/yourusername/3d-solar-system)** | **[Report Issues](https://github.com/yourusername/3d-solar-system/issues)**
+**[Launch Demo](https://regal-cactus-5a61fb.netlify.app)** | **[View Code](https://github.com/lokeshvijay7/3d-solar-system)** | **[Report Issues](https://github.com/lokeshvijay7/3d-solar-system/issues)**
 
