@@ -3,10 +3,7 @@
 > An interactive, educational 3D visualization of our solar system with realistic planetary orbits, individual speed controls, and immersive space environment.
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-View%20Project-blue?style=for-the-badge)](https://regal-cactus-5a61fb.netlify.app)
-[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow?style=for-the-badge&logo=javascript)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![Three.js](https://img.shields.io/badge/Three.js-r128-black?style=for-the-badge&logo=three.js)](https://threejs.org/)
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://html.spec.whatwg.org/)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://www.w3.org/Style/CSS/)
+
 
 ## 📋 Table of Contents
 
@@ -22,7 +19,6 @@
 - [🤝 Performance Optimization](#-performance-optimization)
 - [🔮 Future Enhancements](#-future-enhancements)
 - [👨‍💻 Author](#-author)
-- [📄 License](#-license)
 
 ## 🎯 Features
 
@@ -73,14 +69,6 @@ Experience the solar system like never before! Navigate through space, control p
 ![Solar System Overview](path-to-your-screenshot-1.png)
 *Overview of the complete solar system with orbital paths*
 
-![Planet Details](path-to-your-screenshot-2.png)
-*Interactive planet information panel with detailed stats*
-
-![Control Panel](path-to-your-screenshot-3.png)
-*Advanced control panel with individual planet speed controls*
-
-![Jupiter Close-up](path-to-your-screenshot-4.png)
-*Close-up view of Jupiter showing the Great Red Spot*
 
 ## 🔧 Installation
 
@@ -249,24 +237,6 @@ This project was developed as part of an internship assignment, demonstrating:
 - Performance optimization techniques
 - User experience design principles
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-### Third-Party Libraries
-- **Three.js**: MIT License
-- **OrbitControls**: Three.js License
-- **Material Design Colors**: Apache 2.0 License
-
----
-
-## 🌟 Acknowledgments
-
-- **NASA**: For providing accurate planetary data and inspiration
-- **Three.js Community**: For excellent 3D graphics library and documentation
-- **Astronomy Educators**: For guidance on educational content accuracy
-- **Open Source Community**: For tools and resources that made this possible
-
 ---
 
 <div align="center">
@@ -274,6 +244,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ### 🚀 Ready to Explore the Solar System?
 
 **[Launch Demo](https://regal-cactus-5a61fb.netlify.app)** | **[View Code](https://github.com/yourusername/3d-solar-system)** | **[Report Issues](https://github.com/yourusername/3d-solar-system/issues)**
-
-*Made with ❤️ and lots of ☕ for space exploration education*
 
