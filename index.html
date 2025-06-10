@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive 3D Solar System Simulation with realistic planetary orbits">
+    <meta name="keywords" content="solar system, 3D, simulation, planets, space, astronomy">
+    <meta name="author" content="Solar System Simulator">
+    
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <title>3D Solar System Simulation</title>
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="solar-loader">
+                <div class="sun"></div>
+                <div class="planet planet1"></div>
+                <div class="planet planet2"></div>
+                <div class="planet planet3"></div>
+            </div>
+            <h2>Loading Solar System...</h2>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="app">
+        
+        <div id="canvas-container"></div>
+        
+        
+        <div class="ui-panel">
+            <div class="control-panel">
+                <h3>Solar System Controls</h3>
+                
+                <div class="control-group">
+                    <label for="speed-slider">Global Animation Speed</label>
+                    <input type="range" id="speed-slider" min="0" max="5" step="0.1" value="1">
+                    <span id="speed-value">1x</span>
+                </div>
+                
+                <div class="control-group">
+                    <label for="scale-slider">Planet Scale</label>
+                    <input type="range" id="scale-slider" min="0.5" max="3" step="0.1" value="1">
+                    <span id="scale-value">1x</span>
+                </div>
+                
+                <div class="control-buttons">
+                    <button id="play-pause-btn" class="btn-primary">⏸️ Pause</button>
+                    <button id="reset-btn" class="btn-secondary">🔄 Reset</button>
+                    <button id="fullscreen-btn" class="btn-secondary">🔍 Fullscreen</button>
+                    <button id="theme-toggle-btn" class="btn-theme">🌙 Dark</button>
+                </div>
+                
+                <div class="planet-selector">
+                    <h4>Focus on Planet</h4>
+                    <select id="planet-select">
+                        <option value="overview">Solar System Overview</option>
+                        <option value="sun">Sun</option>
+                        <option value="mercury">Mercury</option>
+                        <option value="venus">Venus</option>
+                        <option value="earth">Earth</option>
+                        <option value="mars">Mars</option>
+                        <option value="jupiter">Jupiter</option>
+                        <option value="saturn">Saturn</option>
+                        <option value="uranus">Uranus</option>
+                        <option value="neptune">Neptune</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="speed-control-panel">
+            <div class="speed-panel-header">
+                <h3>🪐 Planet Speed Controls</h3>
+                <button id="toggle-speed-panel" class="toggle-btn">📊</button>
+            </div>
+            
+            <div class="speed-controls-container">
+                <div class="speed-control-item">
+                    <div class="planet-info">
+                        <div class="planet-icon mercury-icon"></div>
+                        <div class="planet-details">
+                            <span class="planet-name">Mercury</span>
+                            <span class="planet-period">88 days</span>
+                        </div>
+                    </div>
+                    <div class="speed-slider-container">
+                        <input type="range" id="mercury-speed" class="planet-speed-slider" min="0" max="3" step="0.1" value="1" data-planet="mercury">
+                        <span class="speed-display" id="mercury-speed-value">1.0x</span>
+                    </div>
+                </div>
+
+                <div class="speed-control-item">
+                    <div class="planet-info">
+                        <div class="planet-icon venus-icon"></div>
+                        <div class="planet-details">
+                            <span class="planet-name">Venus</span>
+                            <span class="planet-period">225 days</span>
+                        </div>
+                    </div>
+                    <div class="speed-slider-container">
+                        <input type="range" id="venus-speed" class="planet-speed-slider" min="0" max="3" step="0.1" value="1" data-planet="venus">
+                        <span class="speed-display" id="venus-speed-value">1.0x</span>
+                    </div>
+                </div>
+
+                <div class="speed-control-item">
+                    <div class="planet-info">
+                        <div class="planet-icon earth-icon"></div>
+                        <div class="planet-details">
+                            <span class="planet-name">Earth</span>
+                            <span class="planet-period">365 days</span>
+                        </div>
+                    </div>
+                    <div class="speed-slider-container">
+                        <input type="range" id="earth-speed" class="planet-speed-slider" min="0" max="3" step="0.1" value="1" data-planet="earth">
+                        <span class="speed-display" id="earth-speed-value">1.0x</span>
+                    </div>
+                </div>
+
+                <div class="speed-control-item">
+                    <div class="planet-info">
+                        <div class="planet-icon mars-icon"></div>
+                        <div class="planet-details">
+                            <span class="planet-name">Mars</span>
+                            <span class="planet-period">687 days</span>
+                        </div>
+                    </div>
+                    <div class="speed-slider-container">
+                        <input type="range" id="mars-speed" class="planet-speed-slider" min="0" max="3" step="0.1" value="1" data-planet="mars">
+                        <span class="speed-display" id="mars-speed-value">1.0x</span>
+                    </div>
+                </div>
+
+                <div class="speed-control-item">
+                    <div class="planet-info">
+                        <div class="planet-icon jupiter-icon"></div>
+                        <div class="planet-details">
+                            <span class="planet-name">Jupiter</span>
+                            <span class="planet-period">12 years</span>
+                        </div>
+                    </div>
+                    <div class="speed-slider-container">
+                        <input type="range" id="jupiter-speed" class="planet-speed-slider" min="0" max="3" step="0.1" value="1" data-planet="jupiter">
+                        <span class="speed-display" id="jupiter-speed-value">1.0x</span>
+                    </div>
+                </div>
+
+                <div class="speed-control-item">
+                    <div class="planet-info">
+                        <div class="planet-icon saturn-icon"></div>
+                        <div class="planet-details">
+                            <span class="planet-name">Saturn</span>
+                            <span class="planet-period">29 years</span>
+                        </div>
+                    </div>
+                    <div class="speed-slider-container">
+                        <input type="range" id="saturn-speed" class="planet-speed-slider" min="0" max="3" step="0.1" value="1" data-planet="saturn">
+                        <span class="speed-display" id="saturn-speed-value">1.0x</span>
+                    </div>
+                </div>
+
+                <div class="speed-control-item">
+                    <div class="planet-info">
+                        <div class="planet-icon uranus-icon"></div>
+                        <div class="planet-details">
+                            <span class="planet-name">Uranus</span>
+                            <span class="planet-period">84 years</span>
+                        </div>
+                    </div>
+                    <div class="speed-slider-container">
+                        <input type="range" id="uranus-speed" class="planet-speed-slider" min="0" max="3" step="0.1" value="1" data-planet="uranus">
+                        <span class="speed-display" id="uranus-speed-value">1.0x</span>
+                    </div>
+                </div>
+
+                <div class="speed-control-item">
+                    <div class="planet-info">
+                        <div class="planet-icon neptune-icon"></div>
+                        <div class="planet-details">
+                            <span class="planet-name">Neptune</span>
+                            <span class="planet-period">165 years</span>
+                        </div>
+                    </div>
+                    <div class="speed-slider-container">
+                        <input type="range" id="neptune-speed" class="planet-speed-slider" min="0" max="3" step="0.1" value="1" data-planet="neptune">
+                        <span class="speed-display" id="neptune-speed-value">1.0x</span>
+                    </div>
+                </div>
+
+                <div class="speed-panel-actions">
+                    <button id="reset-all-speeds" class="btn-secondary">🔄 Reset All</button>
+                    <button id="sync-speeds" class="btn-primary">⚡ Sync All</button>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div id="planet-info" class="info-panel">
+            <div class="info-content">
+                <button class="close-btn">&times;</button>
+                <h3 id="planet-name">Planet Name</h3>
+                <div class="planet-details">
+                    <div class="detail-item">
+                        <span class="label">Distance from Sun:</span>
+                        <span id="planet-distance">-</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Diameter:</span>
+                        <span id="planet-diameter">-</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Orbital Period:</span>
+                        <span id="planet-period">-</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Temperature:</span>
+                        <span id="planet-temperature">-</span>
+                    </div>
+                </div>
+                <p id="planet-description">Click on a planet to see details</p>
+            </div>
+        </div>
+        
+        
+        <div id="stats" class="stats-panel">
+            <div>FPS: <span id="fps">60</span></div>
+            <div>Objects: <span id="objects">0</span></div>
+        </div>
+    </div>
+
+    
+    <div id="planet-tooltip" class="planet-tooltip">
+        <div class="tooltip-content">
+            <h4 id="tooltip-name">Planet Name</h4>
+            <p id="tooltip-info">Planet information</p>
+        </div>
+    </div>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
