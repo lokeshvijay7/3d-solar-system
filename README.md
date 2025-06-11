@@ -96,9 +96,6 @@ Experience the solar system like never before! Navigate through space, control p
    # Using Python
    python -m http.server 8000
    
-   # Using PHP
-   php -S localhost:8000
-   ```
 
 2. **Access the application**
    ```
