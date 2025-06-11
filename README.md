@@ -163,7 +163,6 @@ Experience the solar system like never before! Navigate through space, control p
 - **🎨 Beautiful Design**: Modern Material Design principles
 - **♿ Accessibility**: Keyboard navigation and screen reader support
 
-## 📚 Educational Value
 
 This simulation serves as an excellent educational tool for:
 
