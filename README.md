@@ -163,15 +163,6 @@ Experience the solar system like never before! Navigate through space, control p
 - **🎨 Beautiful Design**: Modern Material Design principles
 - **♿ Accessibility**: Keyboard navigation and screen reader support
 
-
-This simulation serves as an excellent educational tool for:
-
-- **🏫 Astronomy Classes**: Visual representation of planetary motion
-- **👨‍🏫 Science Education**: Interactive learning about our solar system
-- **🔬 Physics Demonstration**: Orbital mechanics and gravitational effects
-- **🎓 STEM Learning**: Combining science, technology, and mathematics
-- **👥 Public Outreach**: Engaging way to share space science knowledge
-
 ### Learning Outcomes
 Students and users will understand:
 - Relative sizes and distances of planets
