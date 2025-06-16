@@ -213,14 +213,6 @@ Students and users will understand:
 - 🐙 GitHub: [@lokesh](https://github.com/lokeshvijay7)
 - 📧 Email: loki7cr@gmail.com
 
-### Project Context
-This project was developed as part of an internship assignment, demonstrating:
-- Advanced JavaScript and 3D graphics programming
-- Modern web development practices
-- Educational software design
-- Performance optimization techniques
-- User experience design principles
-
 ---
 
 <div align="center">
