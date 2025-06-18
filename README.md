@@ -15,7 +15,7 @@
 - [💻 Usage](#-usage)
 - [🎮 Controls](#-controls)
 - [🌟 Key Highlights](#-key-highlights)
-- [🤝 Performance Optimization](#-performance-optimization)
+- [🤝 Performance Optimization]
 - [🔮 Future Enhancements](#-future-enhancements)
 - [👨‍💻 Author](#-author)
 
